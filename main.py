@@ -146,30 +146,30 @@ def save_to_csv(category_num: int) -> None:
 
 # Uncomment the code below to scrap new databases!
 
-# main function for user interaction
-def main():
-    print("💕 Welcome to Pink Tax 101 💕\n")
-    print("Have you ever heard about the 'Pink Tax'? 🤔")
-    print("It's that sneaky little extra charge applied to products marketed toward women, even though similar products for men often cost less. 😠")
-    print("Let's dive in and explore how much more women pay for basic items like razors, shampoo, and deodorant.")
-    print("You get to pick a category, and we'll show you just how real the Pink Tax is! 💸")
-    print("Ready to see the price differences? Let's go! 🚀\n")
+# # main function for user interaction
+# def main():
+#     print("💕 Welcome to Pink Tax 101 💕\n")
+#     print("Have you ever heard about the 'Pink Tax'? 🤔")
+#     print("It's that sneaky little extra charge applied to products marketed toward women, even though similar products for men often cost less. 😠")
+#     print("Let's dive in and explore how much more women pay for basic items like razors, shampoo, and deodorant.")
+#     print("You get to pick a category, and we'll show you just how real the Pink Tax is! 💸")
+#     print("Ready to see the price differences? Let's start scraping! 🚀\n")
 
-    while True:
-        print("Pick a category:")
-        print("1. Shampoo")
-        print("2. Razors")
-        print("3. Deodorant")
-        try:
-            category_num = int(input("\nEnter the number of the category you want to explore: "))
-            if category_num in [1, 2, 3]:
-                # calling  save_to_csv() with valid category number
-                save_to_csv(category_num)
-                break  # exiting loop after successfully calling function
-            else:
-                print("Invalid category number. Please choose an existing number.😔 \n")
-        except ValueError:
-            print("Invalid input. Please enter a number.🥹\n")
+#     while True:
+#         print("Pick a category:")
+#         print("1. Shampoo")
+#         print("2. Razors")
+#         print("3. Deodorant")
+#         try:
+#             category_num = int(input("\nEnter the number of the category you want to explore: "))
+#             if category_num in [1, 2, 3]:
+#                 # calling  save_to_csv() with valid category number
+#                 save_to_csv(category_num)
+#                 break  # exiting loop after successfully calling function
+#             else:
+#                 print("Invalid category number. Please choose an existing number.😔 \n")
+#         except ValueError:
+#             print("Invalid input. Please enter a number.🥹\n")
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()

@@ -56,7 +56,7 @@ Let’s get you started! 🚀 Follow these steps to set everything up:
 
 ## 🤏 How to run it from scratch
 
-1. **Uncomment from line 145 onwards in `main.py`**
+1. **Uncomment from line 149 onwards in `main.py`**
    - After uncommenting, run the following command in your terminal (make sure you're inside your virtual environment):
    ```bash
    python main.py
