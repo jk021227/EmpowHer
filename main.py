@@ -4,6 +4,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import StaleElementReferenceException, NoSuchElementException, ElementClickInterceptedException
 import time
 import pandas as pd
+import os
 
 # setting up Selenium WebDriver using SafariDriver
 def setup_safari():
@@ -95,7 +96,7 @@ def scrape_all_pages(category_num):
 
         # scraping products from current page
         products = scrape_products_selenium(driver)
-        print(products[0])
+        # print(products[0]) - commented out for debugging
         all_products.extend(products)
 
         # clicking "Next Page" button
@@ -136,8 +137,9 @@ def save_to_csv(category_num: int) -> None:
     # print(df)
 
     # saving df to csv file
+    os.makedirs('./csv_files', exist_ok=True)
     category = 'shampoo' if category_num == 1 else 'razors' if category_num == 2 else 'deodorant'
-    csv_filename = f"{category}_products.csv"
+    csv_filename = f"./csv_files/{category}_products.csv"
     df.to_csv(csv_filename, index=False)
 
     print(f"Products saved to {csv_filename}")

@@ -13,25 +13,36 @@ def load_category_data():
 
     try:
         category_num = int(input("\nEnter the number of the category you want to explore: "))
+        csv_folder = './csv_files'
+
+        # ensuring directory exists
+        if not os.path.exists(csv_folder):
+            print(f"Directory {csv_folder} does not exist. Please create the directory and add the necessary CSV files.")
+            return None, None
         
         # determining file name based on user input
         if category_num == 1:
-            file_name = 'razors_updated_file.csv'
+            file_name = os.path.join(csv_folder, 'razors_updated_file.csv')
             product_category = 'razors'
         elif category_num == 2:
-            file_name = 'deodorant_updated_file.csv'
+            file_name = os.path.join(csv_folder, 'deodorant_updated_file.csv')
             product_category = 'deodorant'
         # uncomment this option once shampoo DB becomes available
         # elif category_num == 3:
-        #     file_name = 'shampoo_updated_file.csv'
+        #     file_name = os.path.join(csv_folder, 'shampoo_updated_file.csv')
         #     product_category = 'shampoo'
         else:
             print("Invalid option, please choose a valid category number.")
             return None, None
 
-        print(f"\n💅 Pink tax for {product_category} at Target:\n")
-        return file_name, product_category
-
+        # checking if file exists before returning
+        if os.path.exists(file_name):
+            print(f"\n💅 Pink tax for {product_category} at Target:\n")
+            return file_name, product_category
+        else:
+            print(f"File {file_name} does not exist. Please check your file path or ensure the file is in the {csv_folder} directory.")
+            return None, None
+        
     except ValueError:
         print("Invalid input. Please enter a number.")
         return None, None

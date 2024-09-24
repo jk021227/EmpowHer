@@ -8,9 +8,14 @@ import os
 # loading environment variables from the .env file
 load_dotenv()
 
+csv_folder = './csv_files'
+# checking if csv file exists before proceeding
+file_name = os.path.join(csv_folder, 'deodorant_products.csv')
+if not os.path.exists(file_name):
+    raise FileNotFoundError(f"File {file_name} does not exist. Please ensure the csv is in the {csv_folder} directory.")
+
 # loading csv file
-file_name = 'deodorant_products.csv'
-product_type = file_name.split('_')[0]
+product_type = os.path.basename(file_name).split('_')[0]
 df = pd.read_csv(file_name)
 
 # loading Personal Access Token (PAT) from .env
@@ -111,7 +116,7 @@ def is_image_girly(image_url):
 df['is_girly'] = df['Image URL'].apply(is_image_girly)
 
 # saving updated csv
-updated_file_name = f'{product_type}_updated_file.csv'
+updated_file_name = os.path.join(csv_folder, f'{product_type}_updated_file.csv')
 df.to_csv(updated_file_name, index=False)
 
 print("Updated CSV with 'is_girly' column saved.")
