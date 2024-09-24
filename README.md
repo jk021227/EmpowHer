@@ -75,7 +75,7 @@ Let’s get you started! 🚀 Follow these steps to set everything up:
    
    You get to pick a category, and we'll show you just how real the Pink Tax is! 💸
    
-   Ready to see the price differences? Let's go! 🚀
+   Ready to see the price differences? Let's start scraping! 🚀
 
    Pick a category:
    1. Shampoo
