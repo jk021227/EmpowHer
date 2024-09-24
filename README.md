@@ -7,7 +7,7 @@ Welcome to the `EmpowHer`, a program where you can learn more about **Pink Tax**
 
 The core features include:
 
-- **Data Scraping**🕵️‍♀️ : `Selenium` is used to scrape Target for product info like names, brands, prices, and images. If you'd like, you can un-comment the code starting from **line 149** in `main.py` to scrape other options like shampoo. In case you’re not in the mood to wait ⏳ for the scraping process, I've already create a sample database using the **razors** and **deodorant** options. 
+- **Data Scraping**🕵️‍♀️ : `Selenium` is used to scrape Target for product info like names, brands, prices, and images. If you'd like, you can un-comment the code starting from **line 149** in `main.py` to scrape other options like shampoo. In case you’re not in the mood to wait ⏳ for the scraping process, I've already created a sample database using the **razors** and **deodorant** options. 
 - **"Girly" Color Detection**: Using Clarifai’s API, we check if a razor’s packaging or design screams *girly* by looking for color shades of pink, purple, or red.
 - **Price Analysis**: When razor prices come in ranges, we calculate the average and show a visual representation of price disparities between girly and non-girly razors. 🛒
 
@@ -18,7 +18,7 @@ To use `EmpowHer`, you'll need a couple of things:
 
 - **Clarifai API**: This is what makes the magic happen when it comes to color detection! 🌈 If you don’t have a *Clarifai* account yet, go create one at [Clarifai Explore](https://clarifai.com/explore) and grab yourself a **Personal Access Token** from the *Security Tab* under your account settings. 🔐
 
-  **Note**: On the free *Community Level Subscription*, you get **1,000 API calls per month**. 🆓 That’s was more than enough for me when I tested out all the options but if you want to use it on a larger database that exceeds 1000 rows, you'll have to upgrade to a paid subcription tier 😭
+  **Note**: On the free *Community Level Subscription*, you get **1,000 API calls per month**. 🆓 That was more than enough for me when I tested out all the options but if you want to use it on a larger database that exceeds 1000 rows, you'll have to upgrade to a paid subscription tier 😭
 
 - **Selenium**: 🕸️ To scrape the product data from Target.
 - **Pandas** & **Matplotlib**: For all things data wrangling and visualization. 🐼
@@ -93,7 +93,7 @@ Let’s get you started! 🚀 Follow these steps to set everything up:
    - Based on your selection, this will generate an `(option)_updated_file.csv` file. This file will have an added boolean column (`is_girly`) to the database.
 
 4. **Run the analysis script**
-   - So, I’ve already whipped up the databases for **razors** and **deodorant**, so the only option you probably scraped is the shampoo one. 🤔 *Totally not* because I ran out of API calls... *cough cough* 🙈.  
+   - So, I’ve already whipped up the databases for **razors** and **deodorant**, so the only option you could have probably scraped is the shampoo one. 🤔 *Totally not* because I ran out of API calls... *cough cough* 🙈.  
    - Open `product_analysis.py` and go ahead and **uncomment line 10** and **lines 30–33** to add shampoo as an option to the Pink Tax analysis. Now, run the analysis in your terminal:
    ```bash
    python product_analysis.py
