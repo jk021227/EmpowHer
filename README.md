@@ -107,6 +107,13 @@ Let’s get you started! 🚀 Follow these steps to set everything up:
 
 5. Feel outraged 😡 or laugh nervously 😅 at the results. 
 
+## 😊 How to NOT run it from scratch
+
+Simply run the following on the terminal and interact:
+```bash
+   python product_analysis.py
+```
+
 ## 🔮 Purpose & Impact
 
 `EmpowHer` will produce some pretty graphs (okay, maybe not *pretty*, but informative 👉 👈). It's an educational tool that can help people become more empowered consumers. It's important to not let these corporate giants overcharge you!
